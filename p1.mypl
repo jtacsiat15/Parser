@@ -1,0 +1,52 @@
+
+# function def
+fun int f(int x)
+  return x
+end
+
+type p
+  var a1 := 0
+end 
+
+while x <= 10 and x >= 0 do
+  print(itos(x))
+  set x := x + 1
+end
+
+if x then
+  set x := x + 1
+elif not x then
+  set x := x - 1
+elif true then
+  set x := 2 * x
+else
+  set x := neg x
+end
+
+
+# function call
+print("Hello World\n")
+
+# simple vdecl
+var x := 0
+
+# vdecls with types
+var string y := "foo"
+var char u := 'a'
+
+# vdecl with user-defined (id) type
+var mytype z := nil
+
+set x := x * (2 + 1)
+
+var bool x := (x < y) and not (y < z and not (x))
+
+set x := neg x
+
+set x := neg 3.14
+
+set x := neg (4 * x)
+
+
+
+

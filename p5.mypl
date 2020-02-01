@@ -1,0 +1,18 @@
+# variables
+
+# declarations
+var v1 := 0
+var int v2 := 0
+var string v3 := "abc"
+var double v4 := nil
+var v5 := nil
+var bool v6 := true
+var v7 := v1 / v2
+
+# assignment
+set v1 := 3.14
+set v2 := 5 + 7
+set v3 := true
+set v1.v2 := v3
+set v1.v2.v3 := v1.v2
+

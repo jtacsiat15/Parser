@@ -1,0 +1,25 @@
+# structs
+
+type S1
+end
+
+type S2
+    var x := 0
+end
+
+type S3
+    var x := 0
+    var y := "abc"
+end
+
+type S4
+    var int x := 0
+    var y := 5
+    var string z := "abc"
+    var S4 u := nil
+end
+
+new S4
+var x := new S4
+var int x := x.u.x
+
