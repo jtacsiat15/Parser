@@ -156,11 +156,6 @@ public class Parser {
   private void fdecl() throws MyPLException{
     debug("<fdecl>");
     eat(TokenType.FUN, "expected word: FUN");
-    //System.out.println(isType(currToken.type()));
-    /*if(currToken.type() == TokenType.NIL ){
-      eat(TokenType.NIL, "expecting nil");
-      //System.out.println("in nil check");
-    }*/
     if(isType(currToken.type())){
       dtype();
     }
