@@ -1,0 +1,3 @@
+#improper set
+var int x := 7
+x:=9

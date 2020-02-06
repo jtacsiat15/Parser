@@ -1,0 +1,35 @@
+#error cases
+e1.mypl
+----------------------------------
+#improper set
+var int x := 7
+x:=9
+
+
+e2.mypl
+----------------------------------
+#no end in loop
+var int y := 1
+for x := 1 to n do
+	set y:= y + 1
+#no end
+
+e3.mypl
+----------------------------------
+#incorrect math operations
+var int x := 1
+var int y := 2
+x + + y
+
+
+
+e4.mypl
+----------------------------------
+#incorrect use of type
+type Node
+	var val :=1
+	var Node next :=nil
+end
+
+var n1 :=new node
+set n1 := 10

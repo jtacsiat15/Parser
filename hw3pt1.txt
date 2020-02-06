@@ -1,0 +1,65 @@
+Jalen Tacsiat
+Hw3 
+
+Pt.1
+(1) var int x := 0
+<stmt> => <stmt><stmts> | E
+       => <bstmt><bstmts>
+       => <vdecl><bstmts>
+       => VAR <dtype> ID ASSIGN <expr><bstmts>
+       => VAR INT_TYPE ID ASSIGN <expr><bstmts> 
+       => VAR INT_TYPE ID ASSIGN <rvalue><bstmts>
+       => VAR INT_TYPE ID ASSIGN <rvalue><bstmts>
+       => VAR INT_TYPE ID ASSIGN <pval><bstmts>
+       => VAR INT_TYPE ID ASSIGN INT_VAL
+
+(2) if x = 0 then print("0") end
+<stmt> => <stmt><stmts>
+       => <bstmt><stmts
+       => <cond><stmts>
+       => IF <expr> THEN <bstmts> <condt> END <stmts>
+       => IF <rvalue><operator><expr> THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID <operator><expr> THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL <expr> THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL <rvalue> THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL <pval> THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN <bstmt><bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN <exit><bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN <expr><bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN <expr> RPAREN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN <rvalue> RPAREN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN <pval> RPAREN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN STRING_VAL RPAREN <bstmts> <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN STRING_VAL RPAREN  <condt> END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN STRING_VAL RPAREN END <stmts>
+       => IF NEW ID EQUAL INT_VAL THEN RETURN LPAREN STRING_VAL RPAREN END 
+
+       
+
+(3) for i := 1 to 10 do set i := i + 1 end
+<stmt> => <stmt><stmts>
+       => <bstmt><stmts>
+       => <for><stmts>
+       => FOR ID ASSIGN <expr> TO <expr> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN <rvalue> TO <expr> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN <pval> TO <expr> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO <expr> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO <rvalue> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO <pval> DO <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO <bstmt><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO <assign><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET <lvalue> ASSIGN <expr><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN <expr><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN <rvalue><operator><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID<operator><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS <expr><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS <rvalue><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS <pval><bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS INT_VAL <bstmts> END <stmts>
+       => FOR ID ASSIGN INT_VAL TO INT_VAL DO SET ID ASSIGN NEW ID PLUS INT_VAL END 
+       
+       
+       

@@ -1,0 +1,6 @@
+#no end in loop
+var int y := 1
+for x := 1 to n do
+	set y:= y + 1
+#no end
+	
