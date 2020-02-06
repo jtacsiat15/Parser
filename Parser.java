@@ -15,7 +15,7 @@ public class Parser {
     
   private Lexer lexer; 
   private Token currToken = null;
-  private boolean debug_flag = true;  // set to false to remove debug comments
+  private boolean debug_flag = false;  // set to false to remove debug comments
   
   /** 
    * Create a new parser over the given lexer.
@@ -173,10 +173,11 @@ public class Parser {
   }
   private void params() throws MyPLException{
     if(isType(currToken.type())){
-      System.out.println(currToken.type());
+      //System.out.println("type in params " + currToken.type());
       debug("<params>");
       dtype();
       eat(TokenType.ID, "expected ID");
+      //System.out.println(currToken.type());
       while (currToken.type() == TokenType.COMMA){
         advance();
         dtype();
@@ -185,7 +186,7 @@ public class Parser {
     }
   }
   private void dtype() throws MyPLException{
-    System.out.println(currToken.type());
+    //System.out.println(currToken.type());
     debug("<dtype>");
     if(currToken.type() == TokenType.INT_TYPE){
       advance();
