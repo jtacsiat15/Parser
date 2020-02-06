@@ -15,7 +15,7 @@ public class Parser {
     
   private Lexer lexer; 
   private Token currToken = null;
-  private boolean debug_flag = true;  // set to false to remove debug comments
+  private boolean debug_flag = false;  // set to false to remove debug comments
   
   /** 
    * Create a new parser over the given lexer.
