@@ -332,7 +332,7 @@ public class Lexer {
         return new Token(TokenType.ELSE, lexeme, line, columnStart);
       }
       else if(lexeme.equals("elif")){
-        return new Token(TokenType.TYPE, lexeme, line, columnStart);
+        return new Token(TokenType.ELIF, lexeme, line, columnStart);
       }
       else if(lexeme.equals("end")){
         return new Token(TokenType.END, lexeme, line, columnStart);

@@ -6,7 +6,7 @@ end
 
 type p
   var a1 := 0
-end 
+end
 
 while x <= 10 and x >= 0 do
   print(itos(x))
@@ -46,7 +46,3 @@ set x := neg x
 set x := neg 3.14
 
 set x := neg (4 * x)
-
-
-
-

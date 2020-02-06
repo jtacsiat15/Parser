@@ -15,7 +15,7 @@ public class Parser {
     
   private Lexer lexer; 
   private Token currToken = null;
-  private boolean debug_flag = false;  // set to false to remove debug comments
+  private boolean debug_flag = true;  // set to false to remove debug comments
   
   /** 
    * Create a new parser over the given lexer.
@@ -83,7 +83,7 @@ public class Parser {
 
   // <bstmts> ::= <bstmt> <bstmts> | epsilon
   private void bstmts() throws MyPLException {
-    System.out.println(currToken.type());
+    //System.out.println(currToken.type());
     if(isBstmt(currToken.type())){
       debug("<bstmts>");
       bstmt();
@@ -173,6 +173,7 @@ public class Parser {
   }
   private void params() throws MyPLException{
     if(isType(currToken.type())){
+      System.out.println(currToken.type());
       debug("<params>");
       dtype();
       eat(TokenType.ID, "expected ID");
@@ -184,6 +185,7 @@ public class Parser {
     }
   }
   private void dtype() throws MyPLException{
+    System.out.println(currToken.type());
     debug("<dtype>");
     if(currToken.type() == TokenType.INT_TYPE){
       advance();
@@ -261,19 +263,22 @@ public class Parser {
     eat(TokenType.THEN, "expected 'then'");
     bstmts();
     condt();
+    debug("in cond");
+    //System.out.println(currToken.type());
     eat(TokenType.END, "expected 'end'");
   }
 
   private void condt() throws MyPLException{
     if(currToken.type() == TokenType.ELIF){
       debug("<condt>");
-      eat(TokenType.ELIF, "expected 'elif'");
+      advance();
+      //eat(TokenType.ELIF, "expected 'elif'");
       expr();
       eat(TokenType.THEN, "expected 'then'");
       bstmts();
       condt();
     }
-    if(currToken.type() == TokenType.ELSE){
+    else if(currToken.type() == TokenType.ELSE){
       advance();
       bstmts();
     }
@@ -284,6 +289,7 @@ public class Parser {
     expr();
     eat(TokenType.DO, "expected 'do'");
     bstmts();
+    debug("in while");
     eat(TokenType.END, "expected 'end'");
   }
   private void tokenFor() throws MyPLException{
@@ -296,6 +302,7 @@ public class Parser {
     expr();
     eat(TokenType.DO, "expected 'do'");
     bstmts();
+    debug("in token for");
     eat(TokenType.END, "expected 'end'");
   }
   //when checking if statements advance
