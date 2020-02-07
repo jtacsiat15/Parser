@@ -267,15 +267,7 @@ public class Lexer {
       //System.out.println(lexeme);
       ++column;
       int columnStart = column;
-      while(!Character.isWhitespace((char)peek()) 
-            && !((char)peek() == '\n') 
-            && !((char)peek() == '(') 
-            && !((char)peek() == ')') 
-            && !((char)peek() == '!') 
-            && !((char)peek() == '<')
-            && !((char)peek() == '>')
-            && !((char)peek() == '=')
-            && !((char)peek() == ':') ){
+      while(Character.isLetter((char)peek()) || (char)peek() == '_' || Character.isDigit((char)peek())){
         lexeme += (char)read();
         ++column;
       }
