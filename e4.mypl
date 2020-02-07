@@ -1,8 +1,0 @@
-#incorrect use of type
-type Node
-	var val :=1
-	var Node next :=nil
-end
-
-var n1 :=new node
-set n1 := 10
